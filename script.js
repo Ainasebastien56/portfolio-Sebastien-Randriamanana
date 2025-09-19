@@ -1,11 +1,21 @@
  const form = document.querySelector('#contact-form'); 
 const msg = document.getElementById('form-message');
 const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('nav-links');
+const links = document.querySelectorAll('#nav-links a');
+
 
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
+
+links.forEach(link => {
+    link.addEventListener('click',()=>{
+        links.forEach( l => l.classList.remove('active-link'));
+        link.classList.add('active-link')
+    })
+});
+
+
 
 sendMail = ()=>{
     let params = {

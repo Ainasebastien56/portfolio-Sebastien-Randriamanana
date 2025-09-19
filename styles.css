@@ -70,7 +70,7 @@ p{
     transform: translateX(-50%) scale(1);
   }
 
-    #nav-links a:active:after{
+    #nav-links a.active-link:after{
     transform: translateX(-50%) scale(1);
   }
   
