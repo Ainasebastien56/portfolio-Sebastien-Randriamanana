@@ -1,5 +1,5 @@
  const form = document.querySelector('#contact-form'); 
-const messageBox = document.getElementById('form-message');
+const msg = document.getElementById('form-message');
 
 sendMail = ()=>{
     let params = {
@@ -8,21 +8,35 @@ sendMail = ()=>{
         subject:document.querySelector('#subject').value,
         message: document.querySelector('#message').value,
     }
-
+    
+    if(params.name==='' || params.email==='' || params.subject==='' || params.message===''){
+         msg.style.display = "block";
+         msg.style.color = "red";
+         msg.textContent = "❌ Please fill in all the fields!";
+    }else{
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!emailRegex.test(params.email)){
+        msg.style.display = "block";
+        msg.style.color = "red";
+        msg.textContent = "❌ Please enter a valid email address!";
+        return;
+    }
 
     emailjs.send("service_akp5prd", "template_glbzlqw",params)
-    .then(()=>{
-            const msg = document.getElementById('form-message');
+        .then(()=>{
             msg.style.display = "block";
             msg.style.color = "green";
             msg.textContent = "✅ Message Sent Successfully!";
            form.reset();
-    })
-    .catch((error) => {
-            const msg = document.getElementById('form-message');
+         })
+         .catch((error) => {
             msg.style.display = "block";
             msg.style.color = "red";
             msg.textContent = "❌ An error occurred. Please try again.";
             console.error(error);
         });
+    
+    }
+
+   
 }
