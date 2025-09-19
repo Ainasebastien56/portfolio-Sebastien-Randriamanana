@@ -101,8 +101,8 @@ p{
     border-radius:50%;
     box-shadow: 2px 2px 4px rgba(255,255,255,0.5);
     margin-bottom: 30px;
-    width:128px;
-    height: 128px;
+    width:150px;
+    height: 150px;
  }
  .hero-content{
     display: flex;
@@ -613,6 +613,7 @@ input, textarea{
         line-height: 1.5rem;
         font-size:1.2rem;
      }
+     
      .hero-buttons a{
         padding:15px 20px;
         border-radius:30px;
@@ -679,8 +680,12 @@ input, textarea{
     #contact p{
        font-size:1rem; 
     }
-    
+}
 
+@media screen and (max-width:320px){
+    .hero-buttons{
+        flex-direction: column;
+    }
 }
 
 
