@@ -411,13 +411,12 @@ p{
     flex-wrap: wrap;
     width: 100%;
     flex-direction: row;
-    gap: 30px;
+    gap: 20px;
 }
 .left-content{
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 form{
@@ -430,7 +429,7 @@ form{
 form div{
     display:flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     margin-bottom:30px;
 }
 label, input{
@@ -448,7 +447,7 @@ input, textarea{
     font-size: 1rem;
 }
  form button{
-    width: 80%;
+    width: 100%;
     text-align: center;
     padding:20px 0;
     border-radius: 12px;
