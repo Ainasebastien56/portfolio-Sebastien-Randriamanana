@@ -1,6 +1,7 @@
  const form = document.querySelector('#contact-form'); 
 const msg = document.getElementById('form-message');
 const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('#nav-links')
 const links = document.querySelectorAll('#nav-links a');
 
 
