@@ -7,6 +7,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <title>Sébastien Randriamanana</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init({
+            publicKey: "YPXVjA6lh12nZucFZ",
+          });
+      })();
+    </script>
   </head>
   <body>
       <header id="navbar">
@@ -190,24 +200,25 @@
           </div>
           </div>
         </div>
-        <form class="right-content" action="#" method="post">
+        <form id="contact-form">
             <div>
-                <label>Name</label>
-                <input type="text" name="name" required>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
             </div>
             <div>
-                 <label>Email</label>
-                <input type="email" name="email" required>
+                 <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="john@doe.com" required>
             </div>
             <div>
-                <label>Subsject</label>
-                <input type="text" name="subject" required>
+                <label for="subject">Subsject</label>
+                <input type="text" id="subject" name="subject" placeholder="Web Development..." required>
             </div>
             <div>
-                <label>Message</label>
-                <textarea rows="10"></textarea>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="10" placeholder="Hello Sébastien, can you help me with..."></textarea>
             </div>
-            <button type="submit">Send Message</button>
+            <button type="button" onclick="sendMail()">Send Message</button>
+            <p id="form-message" style="display: none;"></p>
         </form>
       </div>
     </div>
@@ -222,5 +233,6 @@
         <hr>
         <p>© 2024 Aina Sébastien. All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
