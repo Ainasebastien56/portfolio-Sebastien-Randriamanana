@@ -555,12 +555,18 @@ input, textarea{
   }
   footer p{
     margin-bottom: 20px;
-    font-size: 1rem;
     color: rgba(255,255,255,0.8)
   }
+footer p:nth-of-type(1){
+    font-size: 1rem;
+}
+footer p:nth-of-type(2){
+    font-size: 0.8rem;
+}
   footer hr{
     margin-bottom: 20px;
     width: 100%;
+    height: 0;
     border:1px solid rgba(255,255,255,0.5)
   }
 
