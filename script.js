@@ -35,6 +35,7 @@ const observer2 = new IntersectionObserver((entries)=>{
     entries.forEach(entry=>{
         if(entry.isIntersecting){
             entry.target.classList.add("show")
+
         }else{
             entry.target.classList.remove("show")
         }  
@@ -43,6 +44,7 @@ const observer2 = new IntersectionObserver((entries)=>{
     threshold:0.3
 });
 projectCards.forEach(card => observer2.observe(card));
+
 
 sendMail = ()=>{
     let params = {
