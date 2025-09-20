@@ -3,6 +3,8 @@ const msg = document.getElementById('form-message');
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('#nav-links')
 const links = document.querySelectorAll('#nav-links a');
+const aboutCountent = document.querySelector('.about-content');
+const projectCards = document.querySelectorAll('.project-card')
 
 
 hamburger.addEventListener('click', () => {
@@ -17,6 +19,30 @@ links.forEach(link => {
 });
 
 
+const observer1 = new IntersectionObserver((entries)=>{
+    if(entries[0].isIntersecting){
+        entries[0].target.classList.add("show");
+    }else{
+        entries[0].target.classList.remove("show");
+    }
+},{
+    threshold:0.3
+});
+
+observer1.observe(aboutCountent);
+
+const observer2 = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show")
+        }else{
+            entry.target.classList.remove("show")
+        }  
+    })
+}, {
+    threshold:0.3
+});
+projectCards.forEach(card => observer2.observe(card));
 
 sendMail = ()=>{
     let params = {
