@@ -53,7 +53,7 @@ p{
     position: relative;
  }
 
-  #nav-links a:after{
+  #nav-links a::after{
     content: '';
     position: absolute;
     bottom:0;
@@ -66,11 +66,11 @@ p{
     transition: transform 0.3s ease;    
   }
 
-  #nav-links a:hover:after{
+  #nav-links a:hover::after{
     transform: translateX(-50%) scale(1);
   }
 
-    #nav-links a.active-link:after{
+    #nav-links a.active-link::after{
     transform: translateX(-50%) scale(1);
   }
   
