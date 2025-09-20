@@ -255,8 +255,9 @@ p{
     align-items: center;
 }
 .about-left-content ul span{
-    font-weight: bold;
     color:var(--primary-color);
+    font-size: 0.9rem;
+    font-family:Poppins, sans-serif;
 }
 
 .about-left-content ul .icon{
@@ -326,6 +327,7 @@ p{
     line-height: 1.5rem;
     margin-bottom: 10px;
 }
+
 .tech{
     display: flex;
     gap:20px;
