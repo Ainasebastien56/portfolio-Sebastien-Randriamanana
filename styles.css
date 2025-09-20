@@ -652,15 +652,15 @@ input, textarea{
         flex-direction: column-reverse;
         gap:30px;
     }
-    .projects-contents .project-card{
+    #projects .projects-contents .project-card{
     translate: 100%;
     opacity: 0;
     transition: 0.8s ease-out;
-}
-.projects-contents .project-card.show{
+    }
+    #projects .projects-contents .project-card.show{
     translate: 0;
     opacity: 1;
-}
+    }
 
     #projects h2{
         font-size:2rem;
