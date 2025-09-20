@@ -295,34 +295,22 @@ p{
     font-size:3rem
 }
 
-.projects-contents {
+.projects-contents{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    grid-template-rows: repeat(2);
+    gap:30px;
     justify-items: center;
     width: 100%;
 }
 
-/* Style de base des cartes */
-.projects-contents .project-card {
+.projects-contents .project-card{
     padding: 20px;
     border-bottom: 3px solid rgba(0,0,0,0.2);
     border-radius: 12px;
-    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
-    opacity: 0; 
+    transition: transform 0.3s ease-out;
 }
 
-.projects-contents .project-card:nth-child(odd) {
-    transform: translateX(100%);
-}
-.projects-contents .project-card:nth-child(even) {
-    transform: translateX(-100%);
-}
-
-.projects-contents .project-card.show {
-    transform: translateX(0);
-    opacity: 1;
-}
 .project-card:hover{
     transform: translateY(-20px );
 }
@@ -664,6 +652,7 @@ input, textarea{
         flex-direction: column-reverse;
         gap:30px;
     }
+
     #projects h2{
         font-size:2rem;
     }
@@ -674,11 +663,6 @@ input, textarea{
     #projects .projects-contents{
        display: flex;
        flex-direction: column;
-    }
-
-   .projects-contents .project-card:nth-child(odd),
-    .projects-contents .project-card:nth-child(even) {
-        transform: translateY(50px);
     }
 
     #services .services-header h2{
