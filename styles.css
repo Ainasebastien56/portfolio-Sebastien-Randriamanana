@@ -678,7 +678,7 @@ input, textarea{
 
    .projects-contents .project-card:nth-child(odd),
     .projects-contents .project-card:nth-child(even) {
-        transform: translateY(100px);
+        transform: translateY(50px);
     }
 
     #services .services-header h2{
