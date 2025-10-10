@@ -334,6 +334,9 @@ p{
     margin-bottom: 20px;
     font-weight: 600;
 }
+.tech span{
+    font-family: Poppins, sans-serif;
+}
 .angular{
     color:#9A3412;
 }
