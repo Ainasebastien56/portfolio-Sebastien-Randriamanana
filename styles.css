@@ -179,10 +179,12 @@ p{
  }
  .hero-image img{
     border-radius:50%;
-    box-shadow: 2px 2px 4px rgba(255,255,255,0.5);
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.10);
     margin-bottom: 30px;
-    width:150px;
-    height: 150px;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    transition: width 0.3s, height 0.3s;
  }
  .hero-content{
     display: flex;
@@ -273,6 +275,10 @@ p{
     .custom-shape svg {
         width: calc(160% + 1.3px);
         height: 200px;
+    }
+    .hero-image img {
+        width: 140px;
+        height: 140px;
     }
 }
 #about{
