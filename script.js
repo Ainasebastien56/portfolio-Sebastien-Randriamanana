@@ -7,6 +7,7 @@ const aboutContent = document.querySelector('.about-content');
 const sections = document.querySelectorAll('section, #about, #projects, #services, #contact');
 const themeToggle = document.getElementById('theme-toggle');
 const rootElement = document.documentElement;
+const expItems = document.querySelectorAll('.experience-item');
 
 if (hamburger) {
     hamburger.addEventListener('click', () => {
@@ -95,6 +96,20 @@ if (themeToggle) {
         applyTheme(newTheme);
         localStorage.setItem('theme', newTheme);
     });
+}
+
+// Experience items one-time reveal
+if (expItems && expItems.length) {
+    const expObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    expItems.forEach(item => expObserver.observe(item));
 }
 
 function sendMail(event) {
