@@ -287,7 +287,7 @@ p{
         height: 200px;
     }
     .project-card p{
-        font-size: 1.2rem;
+        font-size: 0.9rem;
     }
 }
 #about{
@@ -1002,7 +1002,7 @@ footer p:nth-of-type(2){
         font-size:2rem;
     }
     #projects p{
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     
     #projects .projects-contents{
