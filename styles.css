@@ -955,24 +955,28 @@ footer p:nth-of-type(2){
     #hamburger {
         display: block;
     }
-    
+    .hero-content{
+        width: 100%;
+        padding:0 10px;
+    }
     .hero-content h1{
         font-size: 2rem;
         text-align: center;
     }
      .hero-content p{
-         width:80%;
+         width:100%;
         line-height: 1.5rem;
-        font-size:1.2rem;
+        font-size:1rem;
+        padding:0 10px;
      }
      
      .hero-buttons a{
         padding:15px 20px;
-        border-radius:30px;
+        border-radius:15px;
         background-color: white;
         border:none;
         font-weight:bold;
-        font-size:1rem;
+        font-size:0.9rem;
         cursor: pointer;
     }
   
@@ -997,9 +1001,14 @@ footer p:nth-of-type(2){
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
     }
-
-    #projects h2{
+    .experience-header p{
+        font-size: 1rem;
+    }
+    #projects  h2{
         font-size:2rem;
+    }
+    #projects .projects-header p{
+        font-size: 1rem;
     }
     #projects p{
         font-size: 0.9rem;
